@@ -1,0 +1,11 @@
+.inputs {
+    margin-bottom: 10px;
+}
+
+#block {
+    margin: 0;
+    position: absolute;
+    top: 40%;
+    left: 43%;
+    font-family: 'arial';
+}
