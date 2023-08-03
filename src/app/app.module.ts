@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,6 +9,8 @@ import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { HeaderComponent } from './components/header/header.component';
+import { AllNotesComponent } from './components/all-notes/all-notes.component';
+import { SingleNoteComponent } from './components/single-note/single-note.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +19,14 @@ import { HeaderComponent } from './components/header/header.component';
     RegisterComponent,
     HomeComponent,
     PageNotFoundComponent,
-    HeaderComponent
+    HeaderComponent,
+    AllNotesComponent,
+    SingleNoteComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
