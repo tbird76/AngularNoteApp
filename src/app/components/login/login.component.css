@@ -2,10 +2,20 @@
     margin-bottom: 10px;
 }
 
+.errorMessage {
+    color: red;
+    margin-bottom: 50px;
+}
+
+.successMessage {
+    color: green;
+}
+
 #block {
     margin: 0;
     position: absolute;
-    top: 40%;
-    left: 43%;
+    top: 32%;
+    left: 40%;
     font-family: 'arial';
+    zoom: 1.75;
 }

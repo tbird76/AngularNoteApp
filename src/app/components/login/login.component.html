@@ -1,10 +1,16 @@
-<div id="block">
+<form [formGroup]="loginForm" (ngSubmit)="login()" id="block">
     <h2>User Login</h2>
-    <input class="inputs" placeholder="User Name">
-    <br>
+    <input formControlName="username" class="inputs" placeholder="User Name"><br>
+    <span class="errorMessage" *ngIf="loginForm.get('username')?.touched && loginForm.get('username')?.invalid">Username is required<br></span>
+    <span class="errorMessage" *ngIf="loginResult.usernameNotFound">User does not exist<br></span>
+    
 
-    <input class="inputs" placeholder="Password">
-    <br>
+    <input formControlName="password" class="inputs" placeholder="Password"><br>
+    <span class="errorMessage" *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid">Password is required<br><br></span>
+    <span class="errorMessage" *ngIf="loginResult.passwordMismatch">Password doesn't match<br></span>
+    
+    <!-- Might get rid of this -->
+    <span class="successMessage" *ngIf="loginResult.loginSuccessful">Login Successful! Welcome!<br></span>
 
-    <button>Log in</button>
-</div>
+    <button type="submit">Log in</button>
+</form>
