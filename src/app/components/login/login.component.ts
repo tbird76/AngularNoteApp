@@ -10,11 +10,7 @@ import { BackendService } from 'src/app/service/backend.service';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
-  constructor(
-    private fb: FormBuilder,
-    private server: BackendService,
-    private router: Router
-  ) {}
+  constructor(private fb: FormBuilder, private server: BackendService, private router: Router) {}
   loginResult = {
     usernameNotFound: false,
     passwordMismatch: false,
