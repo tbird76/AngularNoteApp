@@ -1,1 +1,30 @@
-<p>register works!</p>
+<div class="container">
+<form [formGroup]="registerForm" (ngSubmit)="register()">
+    <h2>Registration</h2>
+    <input formControlName="username" class="inputs" placeholder="User Name">
+    <span class="errorMessage" *ngIf="registerForm.get('username')?.touched && registerForm.get('username')?.invalid"><br>Username is Required</span>
+    <!-- <span class="errorMessage" *ngIf="loginResult.usernameNotFound"><br>User already exists</span> -->
+    <br>
+    
+
+    <input formControlName="password" class="inputs" placeholder="Password">
+    <span class="errorMessage" *ngIf="f.password.touched && f.password.hasError('required')"><br>Password is Required</span>
+    <span class="errorMessage" *ngIf="f.password.touched && f.password.hasError('minlength')"><br>Password needs to be at least 8 characters</span>
+    <span class="errorMessage" *ngIf="f.password.touched && f.password.hasError('passwordMissingLowerCase')"><br>Password needs to have a lower case letter</span>
+    <span class="errorMessage" *ngIf="f.password.touched && f.password.hasError('passwordMissingCapitalCase')"><br>Password needs to have an upper case letter</span>
+    <span class="errorMessage" *ngIf="f.password.touched && f.password.hasError('passwordMissingNumber')"><br>Password needs to have at least 1 number</span>
+    <span class="errorMessage" *ngIf="f.password.touched && f.password.hasError('passwordMissingSpecialCharacter')"><br>Password needs to have at least 1 of the following special characters: ! @ # $ % ^ & *</span>
+    <span class="errorMessage" *ngIf="f.password.touched && f.password.hasError('passwordHasSpace')"><br>Password can't have spaces</span>
+    <br>
+
+    <input formControlName="confirmPassword" class="inputs" placeholder="Confirm Password">
+    <span class="errorMessage" *ngIf="f.confirmPassword.touched && f.confirmPassword.hasError('required')"><br>Password Confirmation is Required</span>
+    <span class="errorMessage" *ngIf="f.password.touched && f.confirmPassword.touched && getConfirmPassword"><br>Passwords don't match</span>
+    <br><br>
+
+    <div>
+    <button type="submit" [disabled]="registerForm.invalid" >Register</button>
+    <a id="loginLink" href="login">Login</a>
+    </div>
+</form>
+</div>

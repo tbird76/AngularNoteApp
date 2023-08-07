@@ -1,0 +1,28 @@
+.inputs {
+    margin-top: 10px;
+}
+
+.errorMessage {
+    color: red;
+}
+
+.successMessage {
+    color: green;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: 'arial';
+    zoom: 1.75;
+    padding: 1px;
+}
+
+#loginLink {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    scale: 0.75;
+}

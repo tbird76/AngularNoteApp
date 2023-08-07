@@ -1,15 +1,20 @@
 {
-    "users": [
-        {
-            "username": "Hello",
-            "password": "World",
-            "userID": 1
-        },
-        {
-            "username": "Foo",
-            "password": "Bar",
-            "userID": 2
-        }
-    ],
-    "notes": []
+  "users": [
+    {
+      "username": "Hello",
+      "password": "World",
+      "userID": 1
+    },
+    {
+      "username": "Foo",
+      "password": "Bar",
+      "userID": 2
+    },
+    {
+      "username": "firstone",
+      "password": "asdf$FDSA1",
+      "userID": 3
+    }
+  ],
+  "notes": []
 }
