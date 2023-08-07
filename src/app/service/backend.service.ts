@@ -15,4 +15,18 @@ export class BackendService {
     return this.http.get('http://localhost:3000/users');
   }
 
+  registerUser(user: any): Observable<any> {
+    let result = this.http.post('http://localhost:3000/users', user);
+    if(result){
+      loggedInUser = this.getUser(user);
+      this.http.post('http://localhost:3000/notes', user.username)
+    }
+
+    return result;
+  }
+
+  getUser(user: any): Observable<any>{
+    return this.http.get('http://localhost:3000/users', user)
+  }
+
 }
