@@ -1,1 +1,8 @@
-<p>all-notes works!</p>
+<app-header></app-header>
+<button (click)="newNote()">Create a Note</button>
+<div>
+    <h1>All Notes</h1>
+    <div *ngFor="let note of allNotes">
+        <app-note-card [selectedNote]="note"></app-note-card>
+    </div>
+</div>
