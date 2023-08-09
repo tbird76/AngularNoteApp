@@ -1,1 +1,30 @@
-<p>single-note works!</p>
+<app-header></app-header>
+<div *ngIf="!isEdit">
+    <button class="editButton" (click)="editNote()">Edit</button>
+    <div>
+        <h1>{{selectedNote.title}}</h1>
+        <div class="rightSide">
+            <span>Date Created: {{selectedNote.dateCreated | date}}</span><br>
+            <span>Favorite: {{selectedNote.favorite}}</span><br>
+            <button (click)="changeFavStatus()">Favorite/Unfavorite</button>
+        </div>
+    </div>
+    <p>{{selectedNote.body}}</p>
+</div>
+<div *ngIf="isEdit">
+    <button class="editButton" (click)="saveNote()">Save</button>
+    <button (click)="cancelSave()">Cancel</button>
+    <button (click)="deleteNote()">Delete</button>
+    <div>
+        <div id="titleEdit">
+            <label>Title</label>
+            <textarea name="titleArea" id="titleArea" rows="1" columns="5">{{selectedNote.title}}</textarea>
+        </div>
+        <div class="rightSide">
+            <span>Date Created: {{selectedNote.dateCreated}}</span><br>
+            <span>Favorite: {{selectedNote.favorite}}</span><br>
+            <button (click)="changeFavStatus()">Favorite/Unfavorite</button>
+        </div>
+    </div>
+    <textarea name="bodyArea" id="bodyArea" cols="30" rows="10">{{selectedNote.body}}</textarea>
+</div>
