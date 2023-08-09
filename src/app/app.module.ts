@@ -13,6 +13,7 @@ import { AllNotesComponent } from './components/all-notes/all-notes.component';
 import { SingleNoteComponent } from './components/single-note/single-note.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NoteCardComponent } from './components/home/note-card/note-card.component';
+import { NewNoteComponent } from './components/new-note/new-note.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { NoteCardComponent } from './components/home/note-card/note-card.compone
     HeaderComponent,
     AllNotesComponent,
     SingleNoteComponent,
-    NoteCardComponent
+    NoteCardComponent,
+    NewNoteComponent
   ],
   imports: [
     BrowserModule,

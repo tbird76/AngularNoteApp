@@ -6,6 +6,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { AllNotesComponent } from './components/all-notes/all-notes.component';
 import { SingleNoteComponent } from './components/single-note/single-note.component';
+import { NewNoteComponent } from './components/new-note/new-note.component';
 
 const routes: Routes = [
   {path:'', redirectTo:'login', pathMatch:'full'},
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path:'register', component: RegisterComponent},
   {path:'all-notes', component: AllNotesComponent},
   {path:'single-note', component: SingleNoteComponent},
+  {path:'new-note', component: NewNoteComponent},
   {path:'**', component: PageNotFoundComponent}
 ];
 
