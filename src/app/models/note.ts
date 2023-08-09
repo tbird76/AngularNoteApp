@@ -3,5 +3,7 @@ export type Note = {
     body: string,
     dateCreated: Date,
     favorite: boolean,
-    noteID: number
+    noteID?: number,
+    userID?: number,
+    id?: number
 }
