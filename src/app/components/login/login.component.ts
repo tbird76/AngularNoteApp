@@ -29,7 +29,7 @@ export class LoginComponent {
     };
 
 
-    this.server.getUsers().subscribe(async (users) => {
+    this.server.getUsers().subscribe((users) => {
       for (let i = 0; i < users.length; i++) {
         if (users[i].username != body.username) {
           this.loginResult.usernameNotFound = true;
