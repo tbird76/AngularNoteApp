@@ -28,7 +28,8 @@ export class LoginComponent {
       password: this.password,
     };
 
-    this.server.getUsers().subscribe((users) => {
+
+    this.server.getUsers().subscribe(async (users) => {
       for (let i = 0; i < users.length; i++) {
         if (users[i].username != body.username) {
           this.loginResult.usernameNotFound = true;
@@ -40,6 +41,8 @@ export class LoginComponent {
           } else {
             this.loginResult.passwordMismatch = false;
             this.loginResult.loginSuccessful = true;
+            body.userID = users[i].userID;
+            this.server.login(body);
             this.router.navigate(['home']);
             break;
           }
