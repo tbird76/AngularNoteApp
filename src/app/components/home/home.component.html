@@ -3,17 +3,13 @@
     <div id="favoritesContainer">
         <h2>Favorites</h2>
         <div *ngFor="let note of favoritesNotesList" class="noteCard">
-            <h3>{{note.title}}</h3>
-            <p>{{note.body}}</p>
-            <button (click)="editNote(note)" class="editButton">Edit</button>
+            <app-note-card [selectedNote]="note"></app-note-card>
         </div>       
     </div>
     <div id="mostRecentContainer">
         <h2>Recent</h2>
         <div *ngFor="let note of mostRecentList" class="noteCard">
-            <h3>{{note.title}}</h3>
-            <p>{{note.body}}</p>
-            <button (click)="editNote2()" class="editButton">Edit</button>
+            <app-note-card [selectedNote]="note"></app-note-card>
         </div>
     </div>
 </div>
