@@ -1,2 +1,19 @@
 <app-header></app-header>
-<p>home works!</p>
+<div class="container">
+    <div id="favoritesContainer">
+        <h2>Favorites</h2>
+        <div *ngFor="let note of favoritesNotesList" class="noteCard">
+            <h3>{{note.title}}</h3>
+            <p>{{note.body}}</p>
+            <button (click)="editNote" class="editButton(note)">Edit</button>
+        </div>       
+    </div>
+    <div id="mostRecentContainer">
+        <h2>Recent</h2>
+        <div *ngFor="let note of mostRecentList" class="noteCard">
+            <h3>{{note.title}}</h3>
+            <p>{{note.body}}</p>
+            <button (click)="editNote" class="editButton(note)">Edit</button>
+        </div>
+    </div>
+</div>
