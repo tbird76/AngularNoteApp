@@ -24,7 +24,6 @@ export class HomeComponent implements OnInit{
 
   allNotes() {
     this.server.getNotes().subscribe(data => {
-      console.log(data);
       for (let i = 0; i < data.length; i++) {
         if (data[i].userID == this.loggedInUser.userID) {
           this.allNotesList.push(JSON.parse(JSON.stringify(data[i])))
@@ -32,7 +31,6 @@ export class HomeComponent implements OnInit{
       }
       this.favNotes();
       this.recentNotes();
-      console.log(this.allNotesList)
     })
   }
 
@@ -54,17 +52,20 @@ export class HomeComponent implements OnInit{
       else
         return 0;
     });
-    console.log(temp);
 
     for(let i=0; i<3; i++){
       this.mostRecentList.push(JSON.parse(JSON.stringify(temp[i])));
     }
-    console.log(this.mostRecentList);
   }
 
   editNote(note: Note){
+    console.log("router test");
     this.server.setNote(note);
-    this.router.navigate(['single-note'])
+    this.router.navigate(['single-note']);
+  }
+
+  editNote2() {
+    this.router.navigate(['login'])
   }
 
 }
