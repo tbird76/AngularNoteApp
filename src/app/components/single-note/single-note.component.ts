@@ -28,7 +28,7 @@ export class SingleNoteComponent implements OnInit{
   }
 
   changeFavStatus(){
-    console.log(new Date().toDateString())
+    console.log(new Date())
     console.log(new Date().toISOString())
     if(this.selectedNote.favorite == true){
       this.selectedNote.favorite = false;

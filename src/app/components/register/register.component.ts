@@ -120,22 +120,49 @@ export class RegisterComponent implements OnInit{
     return this.registerForm.get('confirmPassword');
   }
 
+  checkUserExists(user: User) {
+    let userMatch = false;
+    this.server.getUsers().subscribe((data)=> {
+      for(let i=0; i<data.length; i++){
+        // console.log('User list: ' + data[i].username);
+        // console.log('User: ' + user.username);
+        // console.log(data[i].username == user.username);
+        if(data[i].username == user.username){
+          userMatch = true;
+          // console.log('test: ' + userMatch);
+          break;
+        }
+      }
+    })
+
+    // console.log('Username Match: ' + userMatch);
+    return userMatch;
+  }
+
   
 
 
-  register(){
+  async register(){
     let user: any = {
       username: this.f.username.value,
       password: this.f.password.value
     }
-    
-    this.server.registerUser(user).subscribe(query => {
-      if(query){
-        alert("Welcome " + user.username);
-        this.router.navigate(['home']);
-      }else {
-        alert("Post was unable to complete");
-      }
-    })
+    let uniqueUserName = false;
+
+    console.log('register user check');
+    console.log(this.checkUserExists(user));
+    if(this.checkUserExists(user)){
+      alert("Username is already taken, please select a different username");
+      // uniqueUserName = false;
+    }else{
+      this.server.registerUser(user).subscribe(query => {
+        if(query){
+          alert("Welcome " + user.username);
+          this.router.navigate(['home']);
+        }else {
+          alert("Post was unable to complete");
+        }
+      })
+    }
   }
 }
