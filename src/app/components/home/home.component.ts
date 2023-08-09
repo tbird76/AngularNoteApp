@@ -23,14 +23,16 @@ export class HomeComponent implements OnInit{
   }
 
   allNotes() {
-    this.server.getNotes().subscribe( data => {
-      for(let key in data){
-        if(key == this.loggedInUser.username){
-          this.allNotesList = JSON.parse(JSON.stringify(data[key]));
-          this.favNotes();
-          this.recentNotes();
+    this.server.getNotes().subscribe(data => {
+      console.log(data);
+      for (let i = 0; i < data.length; i++) {
+        if (data[i].userID == this.loggedInUser.userID) {
+          this.allNotesList.push(JSON.parse(JSON.stringify(data[i])))
         }
       }
+      this.favNotes();
+      this.recentNotes();
+      console.log(this.allNotesList)
     })
   }
 
