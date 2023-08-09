@@ -18,9 +18,16 @@ export class HeaderComponent implements OnInit{
   
   loggedInUser!: User;
   
+  home() {
+    this.router.navigate(['home']);
+  }
 
   logout(){
     this.router.navigate(['login']);
+  }
+
+  allNotes(){
+    this.router.navigate(['all-notes']);
   }
 
 }
