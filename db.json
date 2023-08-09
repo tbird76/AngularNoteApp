@@ -3,18 +3,103 @@
     {
       "username": "Hello",
       "password": "World",
-      "userID": 1
+      "userID": 1,
+      "id": 1
     },
     {
       "username": "Foo",
       "password": "Bar",
-      "userID": 2
+      "userID": 2,
+      "id": 2
     },
     {
       "username": "firstone",
       "password": "asdf$FDSA1",
-      "userID": 3
+      "userID": 3,
+      "id": 3
+    },
+    {
+      "username": "secondone",
+      "password": "asdf#FDSA2",
+      "userID": 4,
+      "id": 4
+    },
+    {
+      "username": "test",
+      "password": "asdfFDSA@2",
+      "id": 5
+    },
+    {
+      "username": "test2",
+      "password": "asdfFDas#3",
+      "id": 6
+    },
+    {
+      "username": "test3",
+      "password": "asdfFDSA%5",
+      "id": 7
+    },
+    {
+      "username": "test2",
+      "password": "asdfFDAS#4",
+      "id": 8
+    },
+    {
+      "username": "test2",
+      "password": "asdfF$4a",
+      "id": 9
+    },
+    {
+      "username": "adfad",
+      "password": "asdfafd$3D",
+      "id": 10
     }
   ],
-  "notes": []
+  "notes": [
+    {
+      "title": "Grocery",
+      "body": "Bread, Milk, Cheese",
+      "dateCreated": "2023-08-08",
+      "favorite": true,
+      "noteID": 1,
+      "userID": 1,
+      "id": 1
+    },
+    {
+      "title": "Todo",
+      "body": "things, other, another",
+      "dateCreated": "2023-08-14",
+      "favorite": false,
+      "noteID": 2,
+      "userID": 1,
+      "id": 2
+    },
+    {
+      "title": "Homework",
+      "body": "assignment 1, assignment 2, assignment 3",
+      "dateCreated": "2023-08-05",
+      "favorite": false,
+      "noteID": 3,
+      "userID": 1,
+      "id": 3
+    },
+    {
+      "title": "Tasks",
+      "body": "task 1, task 2, task 3",
+      "dateCreated": "2023-09-05",
+      "favorite": false,
+      "noteID": 4,
+      "userID": 1,
+      "id": 4
+    },
+    {
+      "title": "Lorem ipsum",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae purus non tortor tincidunt consectetur non at arcu. Suspendisse potenti. Vestibulum pharetra tincidunt lacus mollis porta. Quisque quam justo, dignissim sed nibh porttitor, varius dictum velit. Duis et hendrerit urna. Praesent sit amet nisi cursus nisi porttitor condimentum. Suspendisse vulputate est vel enim convallis, eget volutpat sem fermentum. Vivamus tempus, ante et malesuada sollicitudin, felis orci finibus tortor, eget bibendum sem augue sit amet libero. Nam ornare iaculis arcu a porttitor. Quisque sit amet lectus dignissim, ultricies lacus sit amet, blandit metus. Aliquam erat volutpat. Cras accumsan diam pulvinar, pharetra neque at, vestibulum dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla at velit sapien. Maecenas sed lacus et ipsum fringilla finibus.",
+      "dateCreated": "2023-07-05",
+      "favorite": true,
+      "noteID": 5,
+      "userID": 1,
+      "id": 5
+    }
+  ]
 }
