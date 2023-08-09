@@ -2,13 +2,13 @@
 <div class="container">
     <div id="favoritesContainer">
         <h2>Favorites</h2>
-        <div *ngFor="let note of favoritesNotesList" class="noteCard">
+        <div *ngFor="let note of favoritesNotesList">
             <app-note-card [selectedNote]="note"></app-note-card>
         </div>       
     </div>
     <div id="mostRecentContainer">
         <h2>Recent</h2>
-        <div *ngFor="let note of mostRecentList" class="noteCard">
+        <div *ngFor="let note of mostRecentList">
             <app-note-card [selectedNote]="note"></app-note-card>
         </div>
     </div>
