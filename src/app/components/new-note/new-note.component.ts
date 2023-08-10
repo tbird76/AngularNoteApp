@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Location } from '@angular/common'
 import { Note } from 'src/app/models/note';
 import { BackendService } from 'src/app/service/backend.service';
 
@@ -10,7 +11,7 @@ import { BackendService } from 'src/app/service/backend.service';
 })
 export class NewNoteComponent implements OnInit{
   selectedNote: Note;
-  constructor(private router: Router, private server: BackendService) {
+  constructor(private router: Router, private server: BackendService, private location: Location) {
     this.selectedNote = {
       title: '',
       body: '',
@@ -23,8 +24,6 @@ export class NewNoteComponent implements OnInit{
   }
 
   changeFavStatus(){
-    console.log(new Date().toDateString())
-    console.log(new Date().toISOString())
     if(this.selectedNote.favorite == true){
       this.selectedNote.favorite = false;
     }else{
@@ -43,6 +42,7 @@ export class NewNoteComponent implements OnInit{
 
   cancelSave() {
     // this.isEdit = false;
+    this.location.back();
   }
 
   deleteNote() {

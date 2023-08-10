@@ -1,14 +1,13 @@
 <div>
     <button class="editButton" (click)="saveNote()">Save</button>
     <button (click)="cancelSave()">Cancel</button>
-    <button (click)="deleteNote()">Delete</button>
     <div>
         <div id="titleEdit">
             <label>Title</label>
             <textarea name="titleArea" id="titleArea" rows="1" columns="5"></textarea>
         </div>
         <div class="rightSide">
-            <span>Date Created: {{selectedNote.dateCreated}}</span><br>
+            <span>Date Created: {{selectedNote.dateCreated | date}}</span><br>
             <span>Favorite: {{selectedNote.favorite}}</span><br>
             <button (click)="changeFavStatus()">Favorite/Unfavorite</button>
         </div>
