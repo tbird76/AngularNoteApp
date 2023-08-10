@@ -32,24 +32,16 @@ export class NewNoteComponent implements OnInit{
   }
 
   saveNote() {
-    // let tempBody = <HTMLInputElement>document.getElementById('bodyArea');
-    // this.selectedNote.body = tempBody.value;
-    // let tempTitle = <HTMLInputElement>document.getElementById('titleArea');
-    // this.selectedNote.title = tempTitle.value;
-    // this.isEdit = false;
-    // this.server.updateNote(this.selectedNote);
-  }
-
-  cancelSave() {
-    // this.isEdit = false;
+    let tempBody = <HTMLInputElement>document.getElementById('bodyArea');
+    this.selectedNote.body = tempBody.value;
+    let tempTitle = <HTMLInputElement>document.getElementById('titleArea');
+    this.selectedNote.title = tempTitle.value;
+    this.selectedNote.userID = this.server.loggedInUser.userID;
+    this.server.addNote(this.selectedNote);
     this.location.back();
   }
 
-  deleteNote() {
-  //   if (confirm('Are you sure you want to delete this note?')) {
-  //     this.server.deleteNote(this.selectedNote.id!);
-  //     this.server.selectedNote = undefined;
-  //     this.router.navigate(['home']);
-  //   }
+  cancelSave() {
+    this.location.back();
   }
 }
