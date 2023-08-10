@@ -53,6 +53,32 @@
       "username": "adfad",
       "password": "asdfafd$3D",
       "id": 10
+    },
+    {
+      "username": "a",
+      "password": "asdfasdfE$4",
+      "id": 11
+    },
+    {
+      "username": "b",
+      "password": "asdf$4Rr",
+      "id": 12
+    },
+    {
+      "username": "c",
+      "password": "asdfG5%a",
+      "id": 13
+    },
+    {
+      "username": "d",
+      "password": "asdf%5tsD",
+      "id": 14
+    },
+    {
+      "username": "e",
+      "password": "asdf#R4d",
+      "id": 15,
+      "userID": 15
     }
   ],
   "notes": [
@@ -75,6 +101,15 @@
       "id": 3
     },
     {
+      "title": "Tasks",
+      "body": "task 1, task 2, task 3",
+      "dateCreated": "2023-09-05T14:54:55.072Z",
+      "favorite": false,
+      "noteID": 4,
+      "userID": 1,
+      "id": 4
+    },
+    {
       "title": "Lorem ipsum",
       "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae purus non tortor tincidunt consectetur non at arcu. Suspendisse potenti. Vestibulum pharetra tincidunt lacus mollis porta. Quisque quam justo, dignissim sed nibh porttitor, varius dictum velit. Duis et hendrerit urna. Praesent sit amet nisi cursus nisi porttitor condimentum. Suspendisse vulputate est vel enim convallis, eget volutpat sem fermentum. Vivamus tempus, ante et malesuada sollicitudin, felis orci finibus tortor, eget bibendum sem augue sit amet libero. Nam ornare iaculis arcu a porttitor. Quisque sit amet lectus dignissim, ultricies lacus sit amet, blandit metus. Aliquam erat volutpat. Cras accumsan diam pulvinar, pharetra neque at, vestibulum dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla at velit sapien. Maecenas sed lacus et ipsum fringilla finibus.",
       "dateCreated": "2023-07-05T14:54:55.072Z",
@@ -91,6 +126,63 @@
       "noteID": 6,
       "userID": 2,
       "id": 6
+    },
+    {
+      "title": "First Test",
+      "body": "This is a test",
+      "dateCreated": "2023-08-10T21:09:54.161Z",
+      "favorite": true,
+      "userID": 1,
+      "id": 7
+    },
+    {
+      "title": "a",
+      "body": "a",
+      "dateCreated": "2023-08-10T21:13:00.734Z",
+      "favorite": false,
+      "userID": 1,
+      "id": 8
+    },
+    {
+      "title": "b",
+      "body": "b",
+      "dateCreated": "2023-08-10T21:17:02.766Z",
+      "favorite": false,
+      "userID": 1,
+      "id": 9
+    },
+    {
+      "title": "c",
+      "body": "c",
+      "dateCreated": "2023-08-10T21:17:37.329Z",
+      "favorite": false,
+      "userID": 1,
+      "id": 10
+    },
+    {
+      "title": "d",
+      "body": "d",
+      "dateCreated": "2023-08-10T21:19:06.608Z",
+      "favorite": false,
+      "userID": 1,
+      "id": 11
+    },
+    {
+      "title": "e",
+      "body": "e",
+      "dateCreated": "2023-08-10T21:20:18.675Z",
+      "favorite": false,
+      "userID": 1,
+      "id": 12,
+      "noteID": 12
+    },
+    {
+      "title": "Hello",
+      "body": "Wor",
+      "dateCreated": "2023-08-10T21:52:09.023Z",
+      "favorite": true,
+      "userID": 15,
+      "id": 13
     }
   ]
 }

@@ -156,7 +156,12 @@ export class RegisterComponent implements OnInit{
       // uniqueUserName = false;
     }else{
       this.server.registerUser(user).subscribe(query => {
+        console.log(query);
         if(query){
+          let temp = JSON.parse(JSON.stringify(query))
+          temp.userID = temp.id;
+          this.server.loggedInUser = JSON.parse(JSON.stringify(temp));
+          this.server.updateUser(temp);
           alert("Welcome " + user.username);
           this.router.navigate(['home']);
         }else {

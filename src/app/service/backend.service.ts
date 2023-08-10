@@ -11,7 +11,6 @@ import { Note } from '../models/note';
 })
 export class BackendService {
   loggedInUser!: User;
-  testVar: any;
   selectedNote!: Note | undefined;
   userURL = 'http://localhost:3000/users';
   noteURL = 'http://localhost:3000/notes';
@@ -30,18 +29,17 @@ export class BackendService {
     this.loggedInUser = user;
   }
 
-  setTestVar(user: any) {
-    this.testVar = user;
-    return this.testVar;
+  registerUser(user: User) {
+    return this.http.post(this.userURL, user);
+    // .subscribe(data => {
+    //   if (data) {
+    //     this.loggedInUser = JSON.parse(JSON.stringify(user));
+    //   }
+    // })
   }
 
-  registerUser(user: User): Observable<any> {
-    let result = this.http.post(this.userURL, user);
-    if(result){
-      this.loggedInUser = JSON.parse(JSON.stringify(user));
-    }
-
-    return result;
+  updateUser(user: User){
+    this.http.put(this.userURL + '/' + user.id, user).subscribe();
   }
 
   getUser(user: User){
@@ -92,8 +90,13 @@ export class BackendService {
     return this.http.put(this.noteURL + '/' + note.id, note).subscribe();
   }
 
-  newNote(note: Note) {
-    return this.http.post(this.noteURL, note);
+  addNote(note: Note) {
+    return this.http.post(this.noteURL, note).subscribe(data => {
+      let temp = JSON.parse(JSON.stringify(data));
+      temp.noteID = temp.id;
+      this.http.put(this.noteURL + '/' + temp.id, temp).subscribe();
+      console.log(temp.id);
+    });
   }
 
   deleteNote(id: number) {
