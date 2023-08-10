@@ -21,7 +21,7 @@
             <textarea name="titleArea" id="titleArea" rows="1" columns="5">{{selectedNote.title}}</textarea>
         </div>
         <div class="rightSide">
-            <span>Date Created: {{selectedNote.dateCreated}}</span><br>
+            <span>Date Created: {{selectedNote.dateCreated | date}}</span><br>
             <span>Favorite: {{selectedNote.favorite}}</span><br>
             <button (click)="changeFavStatus()">Favorite/Unfavorite</button>
         </div>

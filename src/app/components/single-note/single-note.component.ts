@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Location } from '@angular/common'
 import { Note } from 'src/app/models/note';
 import { BackendService } from 'src/app/service/backend.service';
 
@@ -11,7 +12,7 @@ import { BackendService } from 'src/app/service/backend.service';
 export class SingleNoteComponent implements OnInit{
   selectedNote!: Note;
   isEdit: boolean;
-  constructor(private router: Router, private server: BackendService) {
+  constructor(private router: Router, private server: BackendService, private location: Location) {
     this.isEdit = false;
     this.selectedNote = JSON.parse(JSON.stringify(this.server.selectedNote));
   }
@@ -59,7 +60,8 @@ export class SingleNoteComponent implements OnInit{
     if (confirm('Are you sure you want to delete this note?')) {
       this.server.deleteNote(this.selectedNote.id!);
       this.server.selectedNote = undefined;
-      this.router.navigate(['home']);
+      this.location.back();
+      // this.router.navigate(['home']);
     }
   }
 
