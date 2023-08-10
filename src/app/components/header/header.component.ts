@@ -28,6 +28,10 @@ export class HeaderComponent implements OnInit{
 
   allNotes(){
     this.router.navigate(['all-notes']);
+  }  
+
+  newNote() {
+    this.router.navigate(['new-note'])
   }
 
 }
