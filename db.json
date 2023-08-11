@@ -94,7 +94,7 @@
     {
       "title": "Homework",
       "body": "assignment 1, assignment 2, assignment 3",
-      "dateCreated": "2023-08-05T14:54:55.072Z",
+      "dateCreated": "2023-06-23T14:54:55.072Z",
       "favorite": false,
       "noteID": 3,
       "userID": 1,
@@ -138,7 +138,7 @@
     {
       "title": "a",
       "body": "a",
-      "dateCreated": "2023-08-10T21:13:00.734Z",
+      "dateCreated": "2023-08-11T21:13:00.734Z",
       "favorite": false,
       "userID": 1,
       "id": 8
@@ -146,7 +146,7 @@
     {
       "title": "b",
       "body": "b",
-      "dateCreated": "2023-08-10T21:17:02.766Z",
+      "dateCreated": "2023-07-11T21:17:02.766Z",
       "favorite": false,
       "userID": 1,
       "id": 9
@@ -154,7 +154,7 @@
     {
       "title": "c",
       "body": "c",
-      "dateCreated": "2023-08-10T21:17:37.329Z",
+      "dateCreated": "2023-07-10T21:17:37.329Z",
       "favorite": false,
       "userID": 1,
       "id": 10
@@ -162,7 +162,7 @@
     {
       "title": "d",
       "body": "d",
-      "dateCreated": "2023-08-10T21:19:06.608Z",
+      "dateCreated": "2022-08-10T21:19:06.608Z",
       "favorite": false,
       "userID": 1,
       "id": 11

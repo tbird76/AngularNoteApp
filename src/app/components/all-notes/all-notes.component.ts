@@ -13,6 +13,9 @@ export class AllNotesComponent implements OnInit{
   loggedInUser: User;
   allNotes: Note[] = [];
   searchQuery: any = '';
+  searchDateYear: any = undefined;
+  searchDateMonth: any = undefined;
+  searchDateDay: any = undefined;
 
   constructor(private router: Router, private server: BackendService) {
     this.loggedInUser = JSON.parse(JSON.stringify(this.server.loggedInUser));

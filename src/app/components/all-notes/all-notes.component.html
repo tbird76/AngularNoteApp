@@ -1,9 +1,16 @@
 <app-header></app-header>
-<Label>Search: </Label>
-<input [(ngModel)]="searchQuery">
+<label>Search Notes by Title/Body: </label>
+<input [(ngModel)]="searchQuery"><br>
+<label>Search by Date Using Year, Month, and/or Day: </label><br>
+<label>Year: </label>
+<input type="number" [(ngModel)]="searchDateYear" placeholder="YYYY">
+<label> Month: </label>
+<input type="number" [(ngModel)]="searchDateMonth" placeholder="MM">
+<label> Day: </label>
+<input type="number" [(ngModel)]="searchDateDay" placeholder="dd">
 <div>
     <h1>All Notes</h1>
-    <div *ngFor="let note of allNotes | noteSearch: searchQuery">
+    <div *ngFor="let note of allNotes | noteSearch: searchQuery | dateSearch: searchDateYear:searchDateMonth:searchDateDay">
         <app-note-card [selectedNote]="note"></app-note-card>
     </div>
 </div>
