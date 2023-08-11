@@ -12,6 +12,7 @@ import { BackendService } from 'src/app/service/backend.service';
 export class AllNotesComponent implements OnInit{
   loggedInUser: User;
   allNotes: Note[] = [];
+  searchQuery: any = '';
 
   constructor(private router: Router, private server: BackendService) {
     this.loggedInUser = JSON.parse(JSON.stringify(this.server.loggedInUser));

@@ -1,8 +1,9 @@
 <app-header></app-header>
-<input >
+<Label>Search: </Label>
+<input [(ngModel)]="searchQuery">
 <div>
     <h1>All Notes</h1>
-    <div *ngFor="let note of allNotes">
+    <div *ngFor="let note of allNotes | noteSearch: searchQuery">
         <app-note-card [selectedNote]="note"></app-note-card>
     </div>
 </div>
