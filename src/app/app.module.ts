@@ -11,7 +11,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { HeaderComponent } from './components/header/header.component';
 import { AllNotesComponent } from './components/all-notes/all-notes.component';
 import { SingleNoteComponent } from './components/single-note/single-note.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NoteCardComponent } from './components/home/note-card/note-card.component';
 import { NewNoteComponent } from './components/new-note/new-note.component';
 import { NoteSearchPipe } from './pipes/note-search.pipe';
@@ -34,7 +34,8 @@ import { NoteSearchPipe } from './pipes/note-search.pipe';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
