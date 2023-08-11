@@ -14,6 +14,7 @@ import { SingleNoteComponent } from './components/single-note/single-note.compon
 import { ReactiveFormsModule } from '@angular/forms';
 import { NoteCardComponent } from './components/home/note-card/note-card.component';
 import { NewNoteComponent } from './components/new-note/new-note.component';
+import { NoteSearchPipe } from './pipes/note-search.pipe';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { NewNoteComponent } from './components/new-note/new-note.component';
     AllNotesComponent,
     SingleNoteComponent,
     NoteCardComponent,
-    NewNoteComponent
+    NewNoteComponent,
+    NoteSearchPipe
   ],
   imports: [
     BrowserModule,
