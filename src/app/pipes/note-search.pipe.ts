@@ -15,7 +15,7 @@ export class NoteSearchPipe implements PipeTransform {
     let searchResult: Note[] = [];
 
     for(let i=0; i<value.length; i++){
-      if(value[i].title.includes(args[0]) || value[i].body.includes(args[0])){
+      if(value[i].title.toLowerCase().includes(args[0]) || value[i].body.toLowerCase().includes(args[0])){
         searchResult.push(JSON.parse(JSON.stringify(value[i])));
       }
     }
