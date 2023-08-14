@@ -124,18 +124,13 @@ export class RegisterComponent implements OnInit{
     let userMatch = false;
     this.server.getUsers().subscribe((data)=> {
       for(let i=0; i<data.length; i++){
-        // console.log('User list: ' + data[i].username);
-        // console.log('User: ' + user.username);
-        // console.log(data[i].username == user.username);
         if(data[i].username == user.username){
           userMatch = true;
-          // console.log('test: ' + userMatch);
           break;
         }
       }
     })
 
-    // console.log('Username Match: ' + userMatch);
     return userMatch;
   }
 
@@ -147,27 +142,32 @@ export class RegisterComponent implements OnInit{
       username: this.f.username.value,
       password: this.f.password.value
     }
-    let uniqueUserName = false;
+    let uniqueUserName = true;
 
-    console.log('register user check');
-    console.log(this.checkUserExists(user));
-    if(this.checkUserExists(user)){
-      alert("Username is already taken, please select a different username");
-      // uniqueUserName = false;
-    }else{
-      this.server.registerUser(user).subscribe(query => {
-        console.log(query);
-        if(query){
-          let temp = JSON.parse(JSON.stringify(query))
-          temp.userID = temp.id;
-          this.server.loggedInUser = JSON.parse(JSON.stringify(temp));
-          this.server.updateUser(temp);
-          alert("Welcome " + user.username);
-          this.router.navigate(['home']);
-        }else {
-          alert("Post was unable to complete");
+    this.server.getUsers().subscribe((data: any) => {
+      console.log(JSON.stringify(data));
+      for(let i=0; i<data.length; i++){
+        if(data[i].username == user.username){
+          alert("Username is already taken, please select a different username");
+          uniqueUserName = false;
+          break;
         }
-      })
-    }
+      }
+      if (uniqueUserName) {
+        this.server.registerUser(user).subscribe(query => {
+          console.log(query);
+          if (query) {
+            let temp = JSON.parse(JSON.stringify(query))
+            temp.userID = temp.id;
+            this.server.loggedInUser = JSON.parse(JSON.stringify(temp));
+            this.server.updateUser(temp);
+            alert("Welcome " + user.username);
+            this.router.navigate(['home']);
+          } else {
+            alert("Post was unable to complete");
+          }
+        })
+      }
+    })
   }
 }
