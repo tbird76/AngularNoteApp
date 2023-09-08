@@ -1,4 +1,5 @@
 This app was Angular Boot Camp final project
+Please see ProblemStatementJSONServer for requirements.
 
 This app uses Angular and Typescript for the front end and a json-server as a backend.
 
